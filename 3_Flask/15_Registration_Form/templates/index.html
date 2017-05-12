@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask - 15_Registration_Form</title>
+    <!-- JavaScript -- External -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" charset="utf-8"></script>
+    <!-- JavaScript -- Internal -->
+    <script type="text/javascript" src="{{ url_for( 'static', filename='js/action.js' ) }}" charset="utf-8"></script>
+    <!-- CSS -- External -->
+    <link type="text/css" rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <!-- CSS -- Internal -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for( 'static', filename='css/style.css' ) }}" />
+    <style type="text/css">
+      .flash {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p class="flash">{{message}}</p>
+        {% endfor %}
+        <hr />
+      {% endif %}
+    {% endwith %}
+    <form action="/validate" method="post">
+      <label>Email:</label>
+      <input type="text" name="email" />
+      <br />
+      <label>First Name:</label>
+      <input type="text" name="f_name" />
+      <br />
+      <label>Last Name:</label>
+      <input type="text" name="l_name" />
+      <br />
+      <label>Birthdate:</label>
+      <input type="text" class="date_entry" id="b_date" name="b_date" value="Select Date" />
+      <br />
+      <label>Password:</label>
+      <label>Password:</label>
+      <input type="password" name="passwd_1" />
+      <br />
+      <label>Confirm Password:</label>
+      <input type="password" name="passwd_2" />
+      <br />
+      <input type="submit" name="Register" />
+    </form>
+  </body>
+</html>
