@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask - 7_Dojo_Survey</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for( 'static', filename='css/style.css' ) }}" />
+  </head>
+  <body>
+    <form action="submit" method="post">
+      <label>Your Name:</label>
+      <input type="text" name="name" />
+      <br />
+      <label>Dojo Location:</label>
+      <input type="text" name="loc" />
+      <br />
+      <label>Favorite Language:</label>
+      <input type="text" name="lang" />
+      <br />
+      <label>Comments:</label>
+      <br />
+      <textarea name="comments"></textarea>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

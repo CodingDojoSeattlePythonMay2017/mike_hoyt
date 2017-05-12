@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask - 7_Dojo_Survey - results</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for( 'static', filename='css/style.css' ) }}" />
+    <script type="text/javascript" src="{{ url_for( 'static', filename='js/action.js' ) }}"></script>
+  </head>
+  <body>
+    <strong>Name:</strong>
+    {{ name }}
+    <br />
+    <strong>Dojo Location:</strong>
+    {{ loc }}
+    <br />
+    <strong>Favorite Language:</strong>
+    {{ lang }}
+    <br />
+    <strong>Comments:</strong>
+    {{ comments }}
+    <br />
+    <a href="/">Go Back</a>
+  </body>
+</html>
