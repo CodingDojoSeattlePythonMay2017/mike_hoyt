@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>6_Django - _11_Disappearing_Ninja - ninjas</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'disappearing_ninja/css/style.css' %}">
+  </head>
+  <body>
+    <a href="/ninjas/purple"><img src="{% static 'disappearing_ninja/img/donatello.jpg' %}" alt="TMNT Donatello image" /></a>
+    <a href="/ninjas/blue"><img src="{% static 'disappearing_ninja/img/leonardo.jpg' %}" alt="TMNT Leonardo image" /></a>
+    <a href="/ninjas/orange"><img src="{% static 'disappearing_ninja/img/michelangelo.jpg' %}" alt="TMNT Michelangelo image" /></a>
+    <a href="/ninjas/red"><img src="{% static 'disappearing_ninja/img/raphael.jpg' %}" alt="TMNT Raphael image" /></a>
+  </body>
+</html>
